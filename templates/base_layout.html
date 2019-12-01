@@ -1,0 +1,32 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog_do_Walison</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2> <a href="{% url 'blog:list' %}"> Lista de Posts </a> </h2> <br>
+        <br/>
+        <nav>
+            <ul>
+                <li>
+                    <form class="logout-link" action="{% url 'autor:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit"> Logout </button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrapper">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+
+</html>

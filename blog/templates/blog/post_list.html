@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <div class="post">
+        {% for post in post %}
+        <h1>
+            <a href="{% url 'blog:detail' pk=post.pk %}"> {{ post.titulo }} </a>
+        </h1>
+        <p> Create by: {{ post.dt_cri_post}} </p>
+        <p> {{ post.snippet|safe }} </p>
+        {% endfor %}
+    </div>
+{% endblock %}
+

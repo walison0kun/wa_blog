@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+    <h1> Login </h1><br>
+    <br>
+    <form class="site-form" action="{% url 'autor:login' %}" method="post">
+        {% csrf_token %}
+        {{form}}
+        {% if request.GET.next %}
+        <input type="hidden" name="next">
+        {% endif %}
+        <input type="submit" name="Login">
+    </form>
+{% endblock %}

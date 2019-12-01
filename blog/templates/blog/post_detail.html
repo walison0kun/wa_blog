@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="post-detail">
+    <div class="post">
+        <h1> Título: {{ post.titulo }}</h1>
+        <p> Resumo: {{ post.resumo|safe|linebreaksbr }}</p>
+        <p> Conteúdo: {{ post.conteudo|safe|linebreaksbr }}</p>
+        <p> Criado em: {{ post.dt_cri_post }}</p>
+    </div>
+</div>
+{% endblock %}
