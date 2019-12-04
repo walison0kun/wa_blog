@@ -4,22 +4,35 @@ body{
     background-repeat-y: no-repeat;
     color: #fff;
     padding-left: 15px;
-
 }
 body *{
     font-family: Ubuntu;
 }
 h3,h4,h5{
     font-weight: normal;
-    margin: 0;
+    font-family: 'Lobster', cursive;
+
 }
 
 h1, h2{
     color: #C25100;
-    font-family: 'Lobster';
+    font-family: 'Lobster', cursive;
 }
 
 a, a:hover, a:visited{
     color: #fff;
     text-decoration: none;
 }
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+}
+

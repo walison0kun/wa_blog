@@ -17,4 +17,4 @@ class Post(models.Model):
     def __str__(self):
         return self.titulo
     def snippet(self):
-        return self.resumo[:10] +'...'
+        return self.resumo[:200] +'...'
