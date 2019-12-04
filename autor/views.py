@@ -26,7 +26,7 @@ def login_view(request):
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
             else:
-                return redirect('blog:criar')
+                return redirect('blog:list')
     else:
         form = AuthenticationForm()
     return render(request, 'autor/login.html', {'form': form})

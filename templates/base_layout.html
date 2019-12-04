@@ -11,16 +11,21 @@
 
 <body>
     <div class="wrapper">
-        <h2> <a href="{% url 'blog:list' %}"> Lista de Posts </a> </h2> <br>
-        <br/>
+        <h2> <a href="{% url 'blog:list' %}"> Lista de Posts </a> </h2>
         <nav>
             <ul>
+                {% if user.is_authenticated %}
                 <li>
                     <form class="logout-link" action="{% url 'autor:logout' %}" method="post">
                         {% csrf_token %}
                         <button type="submit"> Logout </button>
                     </form>
                 </li>
+                <li> <a href="{% url 'blog:criar' %}" class="highlight"> Criar nova Postagem </a> </li>
+                {% else %}
+                <li> <a href="{% url 'autor:login' %}"> Login </a> </li>
+                <li> <a href="{% url 'autor:logout' %}"> Logout </a> </li>
+                {% endif %}
             </ul>
         </nav>
     </div>
