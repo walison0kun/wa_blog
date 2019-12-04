@@ -3,9 +3,9 @@
     <div class="post">
         {% for post in post %}
         <h1>
-            <a href="{% url 'blog:detail' pk=post.pk %}"> {{ post.titulo }} </a>
+          <a href="{% url 'blog:detail' pk=post.pk %}"> {{ post.titulo }} <a>
         </h1>
-        <p> Create by: {{post.autor}} em {{ post.dt_cri_post}} </p>
+        <p> Create by: {{post.autor}} em {{ post.dt_cri_post}} </p><wbr>
         <p> {{ post.snippet|safe }} </p>
         {% endfor %}
     </div>
