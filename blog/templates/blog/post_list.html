@@ -1,10 +1,11 @@
 {% extends 'base_layout.html' %}
 {% block content %}
+    <h1> Lista de Postagem </h1>
     <div class="post">
         {% for post in post %}
-        <h1>
+        <h2>
           <a href="{% url 'blog:detail' pk=post.pk %}"> {{ post.titulo }} <a>
-        </h1>
+        </h2>
         <p> Create by: {{post.autor}} em {{ post.dt_cri_post}} </p>
         <p> {{ post.snippet|safe }} </p>
         {% endfor %}
