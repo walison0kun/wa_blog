@@ -1,8 +1,8 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-<div class="post-detail">
-    <div class="post">
-        <h1> Título: {{ post.titulo }}</h1>
+<div class="article-detail">
+    <div class="article">
+        <h2> {{ post.titulo }}</h2>
          <p> {{ post.resumo|safe }} </p>
          <p> {{ post.conteudo|safe}} </p>
         <p> Criado em: {{ post.dt_cri_post }} por {{post.autor}}</p>
