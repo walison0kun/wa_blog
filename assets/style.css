@@ -45,11 +45,12 @@ a:visited {
 }
 
 .wrapper {
-    max-width: 960px: margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 divwrapper h1 {
-    text-alig: center;
+    text-align: center;
     margin: 100px auto;
     font-size: 2.4em;
 }
